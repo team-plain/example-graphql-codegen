@@ -1,0 +1,9 @@
+fragment CompanyParts on Company {
+  __typename
+  id
+  name
+  domainName
+  updatedAt {
+    ...DateTimeParts
+  }
+}

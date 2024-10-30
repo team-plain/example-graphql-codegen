@@ -1,0 +1,8 @@
+fragment UserActorParts on UserActor {
+    __typename
+    userId
+    user {
+        __typename
+       ...UserParts
+    }
+}

@@ -1,0 +1,72 @@
+fragment ThreadStatusDetailParts on ThreadStatusDetail {
+  __typename
+  ... on ThreadStatusDetailCreated {
+    createdAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailSnoozed {
+    snoozedAt {
+      ...DateTimeParts
+    }
+    snoozedUntil {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailUnsnoozed {
+    snoozedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailNewReply {
+    newReplyAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailThreadLinkUpdated {
+    updatedAt {
+      ...DateTimeParts
+    }
+    linearIssueId
+  }
+  ... on ThreadStatusDetailReplied {
+    repliedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailReplied {
+    repliedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailWaitingForCustomer {
+    statusChangedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailWaitingForDuration {
+    statusChangedAt {
+      ...DateTimeParts
+    }
+    waitingUntil {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailInProgress {
+    statusChangedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailThreadDiscussionResolved {
+    threadDiscussionId
+    statusChangedAt {
+      ...DateTimeParts
+    }
+  }
+  ... on ThreadStatusDetailLinearUpdated {
+    updatedAt {
+      ...DateTimeParts
+    }
+    deprecatedLinearIssueId: linearIssueId    
+  }
+}

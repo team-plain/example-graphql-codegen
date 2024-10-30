@@ -1,0 +1,52 @@
+fragment ThreadParts on Thread {
+  __typename
+  id
+  externalId
+  customer {
+    ...CustomerParts
+  }
+  statusDetail {
+    ...ThreadStatusDetailParts
+  }
+  status
+  statusChangedAt {
+    ...DateTimeParts
+  }
+
+  title
+  description
+  previewText
+  priority
+
+  assignedAt {
+    ...DateTimeParts
+  }
+  assignedTo {
+    __typename
+    ... on User {
+      id
+      fullName
+    }
+    ... on MachineUser {
+      id
+      fullName
+    }
+    ... on System {
+      id
+    }
+  }
+
+  createdAt {
+    ...DateTimeParts
+  }
+  createdBy {
+    ...ActorParts
+  }
+
+  updatedAt {
+    ...DateTimeParts
+  }
+  updatedBy {
+    ...ActorParts
+  }
+}

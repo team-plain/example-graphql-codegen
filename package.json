@@ -1,0 +1,24 @@
+{
+  "name": "@team-plain/example-graphql-codegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "./bin/codegen.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "5.0.2",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/typed-document-node": "5.0.7",
+    "@graphql-codegen/typescript": "4.0.7",
+    "@graphql-codegen/typescript-document-nodes": "4.0.7",
+    "@graphql-codegen/typescript-operations": "4.2.1",
+    "@graphql-typed-document-node/core": "3.2.0"
+  },
+  "dependencies": {
+    "graphql": "16.6.0",
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8"
+  }
+}

@@ -1,0 +1,13 @@
+schema: './schema.graphql'
+documents: './graphql/**/*.gql'
+generates:
+  ./graphql/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      nonOptionalTypename: true
+      dedupeFragments: true
+      arrayInputCoercion: false
+      avoidOptionals: true

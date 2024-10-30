@@ -1,0 +1,15 @@
+fragment CustomerActorParts on CustomerActor {
+  __typename
+  customerId
+  customer {
+    id
+    fullName
+    avatarUrl
+    email {
+      email
+    }
+    company {
+      ...CompanyParts
+    }
+  }
+}

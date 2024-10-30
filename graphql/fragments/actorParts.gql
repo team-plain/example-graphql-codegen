@@ -1,0 +1,18 @@
+fragment ActorParts on Actor {
+	__typename
+	... on UserActor {
+		...UserActorParts
+	}
+	... on SystemActor {
+		...SystemActorParts
+	}
+	... on MachineUserActor {
+		...MachineUserActorParts
+	}
+	... on DeletedCustomerActor {
+		...DeletedCustomerActorParts
+	}
+	... on CustomerActor {
+		...CustomerActorParts
+	}
+}

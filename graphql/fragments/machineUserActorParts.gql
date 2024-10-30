@@ -1,0 +1,8 @@
+fragment MachineUserActorParts on MachineUserActor {
+    __typename
+    machineUserId
+    machineUser {
+        __typename
+       ...MachineUserParts
+    }
+}

@@ -1,0 +1,15 @@
+fragment UserParts on User {
+  __typename
+  id
+  fullName
+  publicName
+  email
+  status
+  avatarUrl
+  updatedAt {
+    ...DateTimeParts
+  }
+  deletedAt {
+    ...DateTimeParts
+  }
+}
