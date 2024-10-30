@@ -2750,14 +2750,33 @@ type LinearIssueThreadLink implements ThreadLink {
   linearIssueUrl: String! @deprecated(reason: "Use url instead.")
 }
 
+type PlainThreadThreadLink implements ThreadLink {
+  id: ID!
+  title: String!
+  description: String
+  url: String!
+  status: ThreadLinkStatus!
+  threadId: ID!
+  createdAt: DateTime!
+  createdBy: InternalActor!
+  updatedAt: DateTime!
+  updatedBy: InternalActor!
+  plainThreadId: ID!
+}
+
 input LinearIssueThreadLinkInput {
   linearIssueId: ID!
   linearIssueUrl: String!
 }
 
+input PlainThreadLinkInput {
+  plainThreadId: ID!
+}
+
 input CreateThreadLinkInput {
   threadId: ID!
   linearIssue: LinearIssueThreadLinkInput
+  plainThread: PlainThreadLinkInput
 }
 
 type CreateThreadLinkOutput {
